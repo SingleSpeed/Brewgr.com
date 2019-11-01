@@ -5,6 +5,7 @@
     var user = ViewBag.ActiveUser as UserSummary;
 }
 
+@if (user.IsAdmin) { <script>var admin_link = 1;</script> }
 
 @if (user != null)
 {
@@ -25,6 +26,7 @@
                     {
                         <li class="admin_link"><a href="@Url.Action("tools", "admin", null, Url.Https())">Admin Tools</a></li>
                         <li class="admin_link"><a href="@Url.Action("Exceptions", "Admin")" target="_blank">View Exception Log</a></li>
+                        <script>var admin_link = 1;</script>
                     }
 
                 </ul>
