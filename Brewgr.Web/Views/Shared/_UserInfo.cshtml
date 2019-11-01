@@ -5,7 +5,7 @@
     var user = ViewBag.ActiveUser as UserSummary;
 }
 
-@if (user.IsAdmin) { <script>var admin_link = 1;</script> }
+@if (user != null && user.IsAdmin) { <script>var admin_link = 1;</script> }
 
 @if (user != null)
 {
