@@ -150,6 +150,8 @@ CREATE TABLE [dbo].[BrewSession](
 	[MashStartTemp] [float] NULL,
 	[MashEndTemp] [float] NULL,
 	[MashTime] [int] NULL,
+	[MashTunCapacity] [float] NULL,
+	[HLTMTHeatLoss] [float] NULL,
 	[BoilVolumeActual] [float] NULL,
 	[PreBoilGravity] [float] NULL,
 	[BoilTimeActual] [int] NULL,
