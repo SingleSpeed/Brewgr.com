@@ -73,6 +73,7 @@ else
                 </select>
                 <select data-name="o_Unit" @(ViewData["UnitType"] == "m" ? " data-track=1" : "") data-unit="m" class="form-control input-sm">
                     <option value="each" data-aunit="each">each</option>
+                    <option value="g" data-aunit="oz" @(Model.Unit == "g" ? " selected=\"selected\"" : "")>g</option>
                     <option value="kg" data-aunit="oz" @(Model.Unit == "kg" ? " selected=\"selected\"" : "")>kg</option>
                     <option value="l" data-aunit="gal" @(Model.Unit == "l" ? " selected=\"selected\"" : "")>L</option>
                     <option value="ml" data-aunit="tsp" @(Model.Unit == "ml" ? " selected=\"selected\"" : "")>ml</option>
