@@ -36,7 +36,7 @@ else
 else
 {
                 <select data-name="y_Atten" data-track="1" class="form-control input-sm">
-                    @for (var i = 30; i <= 90; i++)
+                    @for (var i = 30; i <= 99; i++)
     {
         var isSelected = Model != null && Model.Atten != null && (Converter.Convert<double>(Model.Atten) * 100).IsEqualTo(i, .01);
                 <option value="0.@i" @(isSelected ? " selected=\"selected\"" : "")>@i%</option>
