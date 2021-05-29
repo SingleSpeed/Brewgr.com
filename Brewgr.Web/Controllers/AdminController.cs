@@ -55,14 +55,14 @@ namespace Brewgr.Web.Controllers
 		/// </summary>
 		protected override void OnAuthorization(AuthorizationContext filterContext)
 		{
-			base.OnAuthorization(filterContext);
+            base.OnAuthorization(filterContext);
 
-			// Additional Check to Veriy Admin User
-			if(this.ActiveUser == null || !this.UserService.UserIsAdmin(this.ActiveUser.UserId))
-			{
-				this.Issue404();
-			}
-		}
+            // Additional Check to Veriy Admin User
+            if (this.ActiveUser == null || !this.UserService.UserIsAdmin(this.ActiveUser.UserId))
+            {
+                this.Issue404();
+            }
+        }
 
 		/// <summary>
 		/// Executes the ImpersonateView
@@ -100,8 +100,16 @@ namespace Brewgr.Web.Controllers
 			ViewBag.CustomYeasts = this.BrewDataService.GetNonPublicIngredients<Yeast>(25);
 			ViewBag.CustomAdjuncts = this.BrewDataService.GetNonPublicIngredients<Adjunct>(25);
 
-			return View(siteStats);
+            ViewBag.Images = GetAllImages();
+
+            return View(siteStats);
 		}
+
+        public string[] GetAllImages()
+        {
+            string[] allfiles = Directory.GetFiles(@"C:\Sites\Brewgr\Media\img\r", "*.jpg", SearchOption.AllDirectories);
+            return allfiles;
+        }
 
 		/// <summary>
 		/// Executes the View for Exceptions

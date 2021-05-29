@@ -1,0 +1,14 @@
+﻿@using Brewgr.Web
+@using Brewgr.Web.Core.Configuration
+@using Brewgr.Web.Core.Model
+@{
+    var suggestions = ViewBag.Suggestions as IList<UserFeedback>;
+}
+<h3>Images</h3>
+    
+@foreach (var file in ViewBag.Images)
+{
+    <img src="@file.Replace(@"C:\Sites\Brewgr\Media\img\r\", "/media/img/r/")" /><br />
+}
+
+

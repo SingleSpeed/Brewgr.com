@@ -2553,6 +2553,7 @@
     <Content Include="Views\Recipe\RecipeEdit_V2.cshtml" />
     <Content Include="Views\Recipe\RecipeDetail_V2.cshtml" />
     <Content Include="Views\Recipe\_RecipeDetailInfo_V2.cshtml" />
+    <Content Include="Views\Admin\_Images.cshtml" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
